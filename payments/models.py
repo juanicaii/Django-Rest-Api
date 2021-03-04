@@ -24,7 +24,7 @@ class Orders_Detail(models.Model):
     productId = models.ForeignKey(
         Product, verbose_name="Productos Comprados", related_name="products", on_delete=models.CASCADE
     )
-    quantity = models.IntegerField(verbose_name="Cantidad")
+    quantity = models.IntegerField(verbose_name="Cantidad", default=1)
     price = models.FloatField(verbose_name="Precio")
 
     def __str__(self) -> str:

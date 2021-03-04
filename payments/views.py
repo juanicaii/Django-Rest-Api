@@ -19,7 +19,7 @@ class ListOrders(generics.ListCreateAPIView):
 
     def create(self, request):
         data = request.data
-        print(data)
+
         product = Product.objects.filter(id=data["details"]["productId"])
         customer = User.objects.filter(id=data["customers"])
         if product:
